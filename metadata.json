@@ -1,0 +1,8 @@
+{
+  "$schema": "../CTAutocomplete/schema.json",
+  "name": "DynPresence",
+  "creator": "KTibow#3960",
+  "version": "0.0.1",
+  "entry": "index.js",
+  "description": "Set your Discord Rich Presence dynamically based on what you're doing (made for Skyblock)."
+}

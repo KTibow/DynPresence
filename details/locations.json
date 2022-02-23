@@ -1,0 +1,715 @@
+[
+  {
+    "matcher": { "server": "limbo" },
+    "name": "Limbo"
+  },
+  {
+    "matcher": { "gametype": "REPLAY" },
+    "name": "Replay Viewer"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "MAIN"
+    },
+    "name": "Hub Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "SKYWARS"
+    },
+    "name": "Skywars Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "BEDWARS"
+    },
+    "name": "Bedwars Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "LEGACY"
+    },
+    "name": "Classic Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "UHC"
+    },
+    "name": "UHC Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "TNTGAMES"
+    },
+    "name": "TNT Games Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "MCGO"
+    },
+    "name": "Cops and Crims Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "SURVIVAL_GAMES"
+    },
+    "name": "Blitz SG Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "WALLS3"
+    },
+    "name": "Mega Walls Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "SUPER_SMASH"
+    },
+    "name": "Smash Heroes Lobby"
+  },
+  {
+    "matcher": {
+      "server": ".*lobby.*",
+      "gametype": "BATTLEGROUND"
+    },
+    "name": "Warlords Lobby"
+  },
+  {
+    "matcher": { "server": ".*lobby.*" },
+    "customName": "parseLobby"
+  },
+
+  {
+    "matcher": { "gametype": "SKYBLOCK" },
+    "customName": "parseSkyblock"
+  },
+
+  {
+    "matcher": { "gametype": "SMP" },
+    "name": "SMP"
+  },
+  {
+    "matcher": {
+      "gametype": "BEDWARS",
+      "mode": "BEDWARS_EIGHT_ONE"
+    },
+    "name": "Bedwars Solo"
+  },
+  {
+    "matcher": {
+      "gametype": "BEDWARS",
+      "mode": "BEDWARS_EIGHT_TWO"
+    },
+    "name": "Bedwars Doubles"
+  },
+  {
+    "matcher": {
+      "gametype": "BEDWARS",
+      "mode": "BEDWARS_FOUR_THREE"
+    },
+    "name": "Bedwars 3v3v3v3"
+  },
+  {
+    "matcher": {
+      "gametype": "BEDWARS",
+      "mode": "BEDWARS_FOUR_FOUR"
+    },
+    "name": "Bedwars 4v4v4v4"
+  },
+  {
+    "matcher": {
+      "gametype": "BEDWARS",
+      "mode": "BEDWARS_TWO_FOUR"
+    },
+    "name": "Bedwars 4v4"
+  },
+  {
+    "matcher": { "gametype": "BEDWARS" },
+    "name": "Dream Bedwars",
+    "warn": true
+  },
+  {
+    "matcher": {
+      "gametype": "SKYWARS",
+      "mode": "solo_normal"
+    },
+    "name": "Normal Skywars Solo"
+  },
+  {
+    "matcher": {
+      "gametype": "SKYWARS",
+      "mode": "solo_insane"
+    },
+    "name": "Insane Skywars Solo"
+  },
+  {
+    "matcher": {
+      "gametype": "SKYWARS",
+      "mode": "teams_normal"
+    },
+    "name": "Normal Skywars Teams"
+  },
+  {
+    "matcher": {
+      "gametype": "SKYWARS",
+      "mode": "teams_insane"
+    },
+    "name": "Insane Skywars Teams"
+  },
+  {
+    "matcher": {
+      "gametype": "SKYWARS",
+      "mode": "ranked_normal"
+    },
+    "name": "Ranked Skywars"
+  },
+  {
+    "matcher": {
+      "gametype": "SKYWARS",
+      "mode": "mega_normal"
+    },
+    "name": "Mega Skywars"
+  },
+  {
+    "matcher": { "gametype": "SKYWARS" },
+    "name": "Lab Skywars",
+    "warn": true
+  },
+
+  {
+    "matcher": {
+      "gametype": "MURDER_MYSTERY",
+      "mode": "MURDER_CLASSIC"
+    },
+    "name": "Murder Mystery Classic"
+  },
+  {
+    "matcher": {
+      "gametype": "MURDER_MYSTERY",
+      "mode": "MURDER_DOUBLE_UP"
+    },
+    "name": "Murder Mystery Double Up"
+  },
+  {
+    "matcher": {
+      "gametype": "MURDER_MYSTERY",
+      "mode": "MURDER_ASSASSINS"
+    },
+    "name": "Murder Mystery Assassins"
+  },
+  {
+    "matcher": {
+      "gametype": "MURDER_MYSTERY",
+      "mode": "MURDER_INFECTION"
+    },
+    "name": "Murder Mystery Infection"
+  },
+
+  {
+    "matcher": {
+      "gametype": "HOUSING"
+    },
+    "customName": "parseHouse"
+  },
+
+  {
+    "matcher": {
+      "gametype": "PIT"
+    },
+    "name": "The Pit"
+  },
+
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "HOLE_IN_THE_WALL"
+    },
+    "name": "Hole in the Wall"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "SOCCER"
+    },
+    "name": "Football"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "ONEINTHEQUIVER"
+    },
+    "name": "Bounty Hunters"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "DRAW_THEIR_THING"
+    },
+    "name": "Pixel Painters"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "PVP_CTW"
+    },
+    "name": "Capture the Wool"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "DRAGONWARS2"
+    },
+    "name": "Dragon Wars"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "ENDER"
+    },
+    "name": "Ender Spleef"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "STARWARS"
+    },
+    "name": "Galaxy Wars"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "THROW_OUT"
+    },
+    "name": "Throw Out"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "DEFENDER"
+    },
+    "name": "Creeper Attack"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "FARM_HUNT"
+    },
+    "name": "Farm Hunt"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "PARTY"
+    },
+    "name": "Party Games"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "ZOMBIES_DEAD_END"
+    },
+    "name": "Zombies Dead End"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "ZOMBIES_BAD_BLOOD"
+    },
+    "name": "Zombies Bad Blood"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "ZOMBIES_ALIEN_ARCADIUM"
+    },
+    "name": "Zombies Alien Arcadium"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "GRINCH"
+    },
+    "name": "Grinch Simulator"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "HIDE_AND_SEEK_PROP_HUNT"
+    },
+    "name": "Hide and Seek Prop Hunt"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "HIDE_AND_SEEK_PARTY_POOPER"
+    },
+    "name": "Hide and Seek Party Pooper"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "SIMON_SAYS"
+    },
+    "name": "Hypixel Says"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "SANTA_SAYS"
+    },
+    "name": "Santa Says"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "MINI_WALLS"
+    },
+    "name": "Mini Walls"
+  },
+  {
+    "matcher": {
+      "gametype": "ARCADE",
+      "mode": "DAYONE"
+    },
+    "name": "Blocking Dead"
+  },
+  {
+    "matcher": { "gametype": "ARCADE" },
+    "name": "Arcade",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_SOLO_NORMAL" },
+    "name": "Build Battle Solo"
+  },
+  {
+    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_TEAMS_NORMAL" },
+    "name": "Build Battle Teams"
+  },
+  {
+    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_SOLO_PRO" },
+    "name": "Build Battle Pro"
+  },
+  {
+    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_GUESS_THE_BUILD" },
+    "name": "Build Battle Guess the Build"
+  },
+  {
+    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_HALLOWEEN" },
+    "name": "Build Battle Halloween"
+  },
+  {
+    "matcher": {
+      "gametype": "BUILD_BATTLE",
+      "mode": "BUILD_BATTLE_CHRISTMAS_NEW_SOLO"
+    },
+    "name": "Build Battle Christmas Solo"
+  },
+  {
+    "matcher": {
+      "gametype": "BUILD_BATTLE",
+      "mode": "BUILD_BATTLE_CHRISTMAS_NEW_TEAMS"
+    },
+    "name": "Build Battle Christmas Teams"
+  },
+  {
+    "matcher": { "gametype": "BUILD_BATTLE" },
+    "name": "Build Battle",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BOW_DUEL" },
+    "name": "Bow Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_MW_DUEL" },
+    "name": "Mega Walls Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_UHC_FOUR" },
+    "name": "UHC Four Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_SW_DOUBLES" },
+    "name": "SkyWars Doubles Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_UHC_DOUBLES" },
+    "name": "UHC Doubles Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_UHC_DUEL" },
+    "name": "UHC Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_OP_DOUBLES" },
+    "name": "OP Doubles Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_OP_DUEL" },
+    "name": "OP Duel Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_MW_DOUBLES" },
+    "name": "Mega Walls Doubles Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_CLASSIC_DUEL" },
+    "name": "Classic Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_POTION_DUEL" },
+    "name": "Potion Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_COMBO_DUEL" },
+    "name": "Combo Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_SW_DUEL" },
+    "name": "SkyWars Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BLITZ_DUEL" },
+    "name": "Blitz Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BOWSPLEEF_DUEL" },
+    "name": "Bowspleef Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_SUMO_DUEL" },
+    "name": "Sumo Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_SW_TOURNAMENT" },
+    "name": "SkyWars Tournament"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_UHC_TOURNAMENT" },
+    "name": "UHC Tournament"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_SUMO_TOURNAMENT" },
+    "name": "Sumo Tournament"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BRIDGE_DUEL" },
+    "name": "Bridge Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BRIDGE_DOUBLES" },
+    "name": "Bridge Doubles Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BRIDGE_FOUR" },
+    "name": "Bridge 4v4 Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BRIDGE_2V2V2V2" },
+    "name": "Bridge 2v2v2v2 Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BRIDGE_3V3V3V3" },
+    "name": "Bridge 3v3v3v3 Duel"
+  },
+  {
+    "matcher": { "gametype": "DUELS", "mode": "DUELS_BRIDGE_TOURNAMENT" },
+    "name": "Bridge Tournament"
+  },
+  {
+    "matcher": { "gametype": "DUELS" },
+    "name": "Duel",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "PROTOTYPE", "mode": "INVADERS" },
+    "name": "Invaders"
+  },
+  {
+    "matcher": { "gametype": "PROTOTYPE", "mode": "PIXEL_PARTY" },
+    "name": "Pixel Party"
+  },
+  {
+    "matcher": { "gametype": "PROTOTYPE" },
+    "name": "Prototype Game",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "UHC", "mode": "SOLO" },
+    "name": "UHC Solo"
+  },
+  {
+    "matcher": { "gametype": "UHC", "mode": "TEAMS" },
+    "name": "UHC Teams"
+  },
+  {
+    "matcher": { "gametype": "UHC" },
+    "name": "UHC",
+    "warn": true
+  },
+  {
+    "matcher": { "gametype": "SPEED_UHC", "mode": "solo_normal" },
+    "name": "Speed UHC Solo"
+  },
+  {
+    "matcher": { "gametype": "SPEED_UHC", "mode": "team_normal" },
+    "name": "Speed UHC Teams"
+  },
+  {
+    "matcher": { "gametype": "SPEED_UHC" },
+    "name": "Speed UHC",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "TNTGAMES", "mode": "TNTRUN" },
+    "name": "TNT Run"
+  },
+  {
+    "matcher": { "gametype": "TNTGAMES", "mode": "PVPRUN" },
+    "name": "PVP Run"
+  },
+  {
+    "matcher": { "gametype": "TNTGAMES", "mode": "BOWSPLEEF" },
+    "name": "Bow Spleef"
+  },
+  {
+    "matcher": { "gametype": "TNTGAMES", "mode": "TNTTAG" },
+    "name": "TNT Tag"
+  },
+  {
+    "matcher": { "gametype": "TNTGAMES", "mode": "CAPTURE" },
+    "name": "Wizards"
+  },
+  {
+    "matcher": { "gametype": "TNTGAMES" },
+    "name": "TNT Games",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "VAMPIREZ" },
+    "name": "VampireZ"
+  },
+  {
+    "matcher": { "gametype": "QUAKECRAFT" },
+    "name": "Quakecraft"
+  },
+  {
+    "matcher": { "gametype": "PAINTBALL" },
+    "name": "Paintball"
+  },
+  {
+    "matcher": { "gametype": "ARENA" },
+    "name": "Arena Brawl"
+  },
+  {
+    "matcher": { "gametype": "WALLS" },
+    "name": "The Walls"
+  },
+  {
+    "matcher": { "gametype": "GINGERBREAD" },
+    "name": "Turbo Kart Racers"
+  },
+  {
+    "matcher": { "gametype": "LEGACY" },
+    "name": "Classic Games",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "MCGO", "mode": "normal" },
+    "name": "Cops & Crims Defusal"
+  },
+  {
+    "matcher": { "gametype": "MCGO", "mode": "deathmatch" },
+    "name": "Cops & Crims Team Deathmatch"
+  },
+  {
+    "matcher": { "gametype": "MCGO" },
+    "name": "Cops & Crims",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "SURVIVAL_GAMES", "mode": "solo_normal" },
+    "name": "Blitz SG Solo"
+  },
+  {
+    "matcher": { "gametype": "SURVIVAL_GAMES", "mode": "teams_normal" },
+    "name": "Blitz SG Teams"
+  },
+  {
+    "matcher": { "gametype": "SURVIVAL_GAMES" },
+    "name": "Blitz SG",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "WALLS3", "mode": "face_off" },
+    "name": "Mega Walls Face Off"
+  },
+  {
+    "matcher": { "gametype": "WALLS3", "mode": "standard" },
+    "name": "Mega Walls Standard"
+  },
+  {
+    "matcher": { "gametype": "WALLS" },
+    "name": "Mega Walls",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "SUPER_SMASH", "mode": "1v1_normal" },
+    "name": "Smash Heroes 1v1"
+  },
+  {
+    "matcher": { "gametype": "SUPER_SMASH", "mode": "friends_normal" },
+    "name": "Smash Heroes Friends"
+  },
+  {
+    "matcher": { "gametype": "SUPER_SMASH", "mode": "solo_normal" },
+    "name": "Smash Heroes Solo"
+  },
+  {
+    "matcher": { "gametype": "SUPER_SMASH", "mode": "2v2_normal" },
+    "name": "Smash Heroes 2v2"
+  },
+  {
+    "matcher": { "gametype": "SUPER_SMASH", "mode": "teams_normal" },
+    "name": "Smash Heroes 2v2v2"
+  },
+  {
+    "matcher": { "gametype": "SUPER_SMASH" },
+    "name": "Smash Heroes",
+    "warn": true
+  },
+
+  {
+    "matcher": { "gametype": "BATTLEGROUND", "mode": "ctf_mini" },
+    "name": "Warlords Capture the Flag"
+  },
+  {
+    "matcher": { "gametype": "BATTLEGROUND", "mode": "domination" },
+    "name": "Warlords Domination"
+  },
+  {
+    "matcher": { "gametype": "BATTLEGROUND", "mode": "team_deathmatch" },
+    "name": "Warlords Team Deathmatch"
+  }
+]
