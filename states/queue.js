@@ -22,9 +22,10 @@ const isPlayerInQueue = () => {
       "UHC",
       "SPEED_UHC",
       "TNT_GAMES",
-    ].includes(location.gametype)
+    ].includes(location.gametype) &&
+    isPlayerQueueing
   ) {
-    return isPlayerQueueing;
+    return "Queueing";
   }
   if (isPlayerQueueing) {
     ChatLib.chat(

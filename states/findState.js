@@ -4,10 +4,12 @@
 import { isPlayerChatting } from "./chat";
 import { isPlayerMoving } from "./moving";
 import { isPlayerInQueue } from "./queue";
+import { findSkillGrinding } from "./skills";
 
 const priorities = [
-  [isPlayerInQueue, "Queueing"],
-  [isPlayerMoving, "Moving around"],
+  findSkillGrinding,
+  isPlayerInQueue,
+  isPlayerMoving,
   // TODO: Implement Mining
   // TODO: Implement Fishing
   // TODO: Implement Foraging
@@ -17,10 +19,11 @@ const priorities = [
 
 const findState = () => {
   const chattingAddon = isPlayerChatting() ? " & Chatting" : "";
-  for (possibleState of priorities) {
+  for (activityTester of priorities) {
     // Is the player doing this?
-    if (possibleState[0]()) {
-      return possibleState[1] + chattingAddon; // Return the state
+    let playerActivity = activityTester();
+    if (playerActivity) {
+      return playerActivity + chattingAddon; // Return the state
     }
   }
   return "AFK" + chattingAddon;

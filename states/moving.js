@@ -18,6 +18,9 @@ Client.getKeyBindFromKey(Keyboard.KEY_SPACE).registerKeyPress(() => {
   lastInteraction = Date.now();
 });
 const isPlayerMoving = () => {
-  return Date.now() - lastInteraction <= 1000 * 60 * 5;
+  const fiveMinutes = 1000 * 60 * 5;
+  if (Date.now() - lastInteraction <= fiveMinutes) {
+    return "Moving";
+  }
 };
 export { isPlayerMoving };
