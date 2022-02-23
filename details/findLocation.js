@@ -3,6 +3,7 @@
 
 import { parseHouse } from "./housing";
 import { parseLobby } from "./lobby";
+import { parseSkyblock } from "./skyblock";
 import { getLocraw } from "./updateLocraw";
 
 const locations = JSON.parse(FileLib.read("DynPresence", "details/locations.json"));
