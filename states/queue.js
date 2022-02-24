@@ -35,7 +35,7 @@ const isPlayerInQueue = () => {
     ChatLib.chat(
       `&eIf this game is indeed queueable, or not, tell me at &9KTibow#3960&e.&r`
     );
-    ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
+    ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(location)}`);
   }
 };
 
