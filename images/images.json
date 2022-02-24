@@ -1,0 +1,37 @@
+[
+  {
+    "locMatcher": { "server": "limbo" },
+    "largeImage": "limbo"
+  },
+  {
+    "locMatcher": { "gametype": "REPLAY" },
+    "largeImage": "replay"
+  },
+  {
+    "locMatcher": {
+      "server": ".*lobby.*",
+      "gametype": "MAIN"
+    },
+    "largeImage": "mainhub"
+  },
+  {
+    "locMatcher": {
+      "server": ".*lobby.*",
+      "gametype": "SKYWARS"
+    },
+    "largeImage": "skywarshub"
+  },
+  {
+    "locMatcher": {
+      "server": ".*lobby.*",
+      "gametype": "BEDWARS"
+    },
+    "largeImage": "bedwarshub"
+  },
+  {
+    "locMatcher": {
+      "server": ".*lobby.*"
+    },
+    "largeImage": "mischub"
+  }
+]

@@ -3,6 +3,7 @@
 
 import { findLocationName } from "./details/findLocation";
 import { getLocraw } from "./details/updateLocraw";
+import { findImage } from "./images/findImage";
 import {
   DiscordRichPresence,
   exitRichPresence,
@@ -10,15 +11,6 @@ import {
   setRichPresence,
 } from "./presence";
 import { findState } from "./states/findState";
-
-/*let rpc = new RichPresence("945448106462441492", {
-  state: "Using KDiscordIPC",
-  details: "Playing ChatTriggers",
-  startTimestamp: Date.now(),
-  largeImageKey: "search",
-  largeImageText: "text",
-});*/
-initRichPresence("945448106462441492");
 
 const isOnHypixel = () => {
   return Server.getIP()?.includes("hypixel");
@@ -34,10 +26,17 @@ register("tick", () => {
   if (isOnHypixel()) {
     const state = findState();
     const location = findLocationName();
+    const image = findImage();
     let presence = new DiscordRichPresence();
     presence.state = state;
     presence.details = location;
     presence.startTimestamp = timeStarted;
+    if (image && image.largeImage) {
+      presence.largeImageKey = image.largeImage;
+    }
+    if (image && image.smallImage) {
+      presence.smallImageKey = image.smallImage;
+    }
     setRichPresence(presence);
   }
 });
@@ -45,9 +44,14 @@ register("tick", () => {
 register("renderOverlay", () => {
   Renderer.drawString(findState(), 10, 10);
   Renderer.drawString(findLocationName(), 10, 20);
-  Renderer.drawString(JSON.stringify(getLocraw()), 10, 30);
+  Renderer.drawString(JSON.stringify(findImage()), 10, 30);
+  Renderer.drawString(JSON.stringify(getLocraw()), 10, 40);
 });
 
 register("gameUnload", () => {
   exitRichPresence();
 });
+
+new Thread(() => {
+  initRichPresence("945448106462441492");
+}).start();
