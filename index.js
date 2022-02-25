@@ -48,10 +48,10 @@ register("renderOverlay", () => {
   Renderer.drawString(JSON.stringify(getLocraw()), 10, 40);
 });
 
+register("gameLoad", () => {
+  initRichPresence("945448106462441492");
+});
+
 register("gameUnload", () => {
   exitRichPresence();
 });
-
-new Thread(() => {
-  initRichPresence("945448106462441492");
-}).start();

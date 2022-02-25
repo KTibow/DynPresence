@@ -12,7 +12,7 @@ const findLocation = () => {
   // Props to ConnorLinfoot's DiscordRP for helping me understand /locraw
   const locraw = getLocraw();
   if (!Object.keys(locraw).length) {
-    return "Checking...";
+    return [{ name: "Checking..." }, locraw];
   }
   for (let location of locations) {
     let matcher = location.matcher;
