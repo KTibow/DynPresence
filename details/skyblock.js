@@ -28,7 +28,9 @@ const parseSkyblock = (locraw) => {
       return `Skyblock ${locraw.map}`;
     }
   }
-  ChatLib.chat(`&eDynPresence couldn't find any Skyblock matches for your location.&r`);
+  ChatLib.chat(
+    `&eDynPresence couldn't find any Skyblock matches for your location.&r`
+  );
   ChatLib.chat(`&ePlease let me know at &9KTibow#3960&e.&r`);
   ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
   return "Skyblock";

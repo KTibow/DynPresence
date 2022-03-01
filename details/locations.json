@@ -390,11 +390,17 @@
   },
 
   {
-    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_SOLO_NORMAL" },
+    "matcher": {
+      "gametype": "BUILD_BATTLE",
+      "mode": "BUILD_BATTLE_SOLO_NORMAL"
+    },
     "name": "Build Battle Solo"
   },
   {
-    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_TEAMS_NORMAL" },
+    "matcher": {
+      "gametype": "BUILD_BATTLE",
+      "mode": "BUILD_BATTLE_TEAMS_NORMAL"
+    },
     "name": "Build Battle Teams"
   },
   {
@@ -402,7 +408,10 @@
     "name": "Build Battle Pro"
   },
   {
-    "matcher": { "gametype": "BUILD_BATTLE", "mode": "BUILD_BATTLE_GUESS_THE_BUILD" },
+    "matcher": {
+      "gametype": "BUILD_BATTLE",
+      "mode": "BUILD_BATTLE_GUESS_THE_BUILD"
+    },
     "name": "Build Battle Guess the Build"
   },
   {

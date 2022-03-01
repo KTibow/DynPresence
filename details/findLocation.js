@@ -6,7 +6,9 @@ import { parseLobby } from "./lobby";
 import { parseSkyblock } from "./skyblock";
 import { getLocraw } from "./updateLocraw";
 
-const locations = JSON.parse(FileLib.read("DynPresence", "details/locations.json"));
+const locations = JSON.parse(
+  FileLib.read("DynPresence", "details/locations.json")
+);
 
 const findLocation = () => {
   // Props to ConnorLinfoot's DiscordRP for helping me understand /locraw
@@ -36,7 +38,9 @@ const findLocationName = () => {
   const [location, locraw] = findLocation();
   if (location) {
     if (location.warn) {
-      ChatLib.chat(`&eDynPresence couldn't find an exact match for your location.&r`);
+      ChatLib.chat(
+        `&eDynPresence couldn't find an exact match for your location.&r`
+      );
       ChatLib.chat(
         `&eFor now, it'll assume that it's the general game, or the experimental version of it.&r`
       );
