@@ -3,8 +3,10 @@ const DiscordEventHandlers = Java.type("net.arikia.dev.drpc.DiscordEventHandlers
 const DiscordRichPresence = Java.type("net.arikia.dev.drpc.DiscordRichPresence");
 
 const initRichPresence = (clientID) => {
-  handlers = new DiscordEventHandlers.Builder().build();
-  DiscordRPC.discordInitialize(clientID, handlers, true);
+  new Thread(() => {
+    handlers = new DiscordEventHandlers.Builder().build();
+    DiscordRPC.discordInitialize(clientID, handlers, true);
+  }).start();
 };
 
 const exitRichPresence = () => {

@@ -15,19 +15,13 @@ register("chat", (event) => {
   }
 }).setPriority(Priority.HIGH);
 
-/*register("chat", (event) => {
-  try {
-    JSON.parse(ChatLib.getChatMessage(event).replace(/§./g, ""));
-    // If the message is a /locraw response, hide it
-    cancel(event);
-  } catch (e) {
-    return;
-  }
-}).setPriority(Priority.LOWEST);*/
+const isOnHypixel = () => {
+  return Server.getIP()?.includes("hypixel");
+};
 
 register("step", () => {
   const timeSinceLastUpdate = Date.now() - lastLocrawUpdate;
-  if (timeSinceLastUpdate > 1000 * 60) {
+  if (timeSinceLastUpdate > 1000 * 60 && isOnHypixel()) {
     ChatLib.say("/locraw");
   }
   // Ask for the current location every minute
@@ -42,4 +36,4 @@ const getLocraw = () => {
   return lastLocraw;
 };
 
-export { getLocraw };
+export { getLocraw, isOnHypixel };

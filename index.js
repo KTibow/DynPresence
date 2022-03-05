@@ -2,7 +2,7 @@
 /// <reference lib="es2015" />
 
 import { findLocationName } from "./details/findLocation";
-import { getLocraw } from "./details/updateLocraw";
+import { getLocraw, isOnHypixel } from "./details/updateLocraw";
 import { findImage } from "./images/findImage";
 import {
   DiscordRichPresence,
@@ -11,10 +11,6 @@ import {
   setRichPresence,
 } from "./presence";
 import { findState } from "./states/findState";
-
-const isOnHypixel = () => {
-  return Server.getIP()?.includes("hypixel");
-};
 
 let timeStarted = 0;
 register("tick", () => {
