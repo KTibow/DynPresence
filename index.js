@@ -13,6 +13,7 @@ import {
 import { findState } from "./states/findState";
 
 let timeStarted = 0;
+let discordConnected = false;
 register("tick", () => {
   if (timeStarted === 0 && isOnHypixel()) {
     timeStarted = Date.now();
@@ -44,8 +45,11 @@ register("renderOverlay", () => {
   Renderer.drawString(JSON.stringify(getLocraw()), 10, 40);
 });
 
-register("gameLoad", () => {
-  initRichPresence("945448106462441492");
+register("worldLoad", () => {
+  if (!discordConnected) {
+    initRichPresence("945448106462441492");
+    discordConnected = true;
+  }
 });
 
 register("gameUnload", () => {
