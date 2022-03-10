@@ -21,7 +21,7 @@ const parseSkyblock = (locraw) => {
         islandSection = rawText.split("⏣")[1].trim();
       }
     }
-    islandSection = islandSection.replace(/[^a-zA-Z0-9 ]/g, "");
+    islandSection = islandSection.replace(/[^a-zA-Z0-9\' ]/g, "");
     if (islandSection && islandSection != locraw.map) {
       return `${islandSection} in the Skyblock ${locraw.map}`;
     } else {

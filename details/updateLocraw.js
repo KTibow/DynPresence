@@ -36,4 +36,4 @@ const getLocraw = () => {
   return lastLocraw;
 };
 
-export { getLocraw, isOnHypixel };
+export { getLocraw, isOnHypixel, lastLocrawUpdate };

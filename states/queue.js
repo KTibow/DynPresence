@@ -1,7 +1,7 @@
 /// <reference path="../../CTAutocomplete/index.d.ts" />
 /// <reference lib="es2015" />
 
-import { getLocraw } from "../details/updateLocraw";
+import { getLocraw, lastLocrawUpdate } from "../details/updateLocraw";
 
 const isPlayerInQueue = () => {
   const location = getLocraw();
@@ -27,15 +27,14 @@ const isPlayerInQueue = () => {
   ) {
     return "Queuing";
   }
-  if (isPlayerQueuing) {
+  const timeSinceLastUpdate = Date.now() - lastLocrawUpdate;
+  if (isPlayerQueuing && timeSinceLastUpdate > 1000 * 6) {
     ChatLib.chat(
-      `&eThis game has a queue-related message in the scoreboard, but it's not marked as a queable game.&r`
+      `&eThis game has a queue-related message in the scoreboard, but it's not marked as a queable game.&r
+&eFor now, it won't show you as Queuing, just Moving Around.&r
+&eIf this game is indeed queueable, or not, tell me at &9KTibow#3960&e.&r
+&eDebug info to pass on:&r ${JSON.stringify(location)}`
     );
-    ChatLib.chat(`&eFor now, it won't show you as Queuing, just Moving Around.&r`);
-    ChatLib.chat(
-      `&eIf this game is indeed queueable, or not, tell me at &9KTibow#3960&e.&r`
-    );
-    ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(location)}`);
   }
 };
 
