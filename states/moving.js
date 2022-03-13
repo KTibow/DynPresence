@@ -2,25 +2,25 @@
 /// <reference lib="es2015" />
 
 let lastInteraction = 0;
-Client.getKeyBindFromKey(Keyboard.KEY_W).registerKeyPress(() => {
+Client.getKeyBindFromDescription("key.forward").registerKeyPress(() => {
   lastInteraction = Date.now();
 });
-Client.getKeyBindFromKey(Keyboard.KEY_A).registerKeyPress(() => {
+Client.getKeyBindFromDescription("key.left").registerKeyPress(() => {
   lastInteraction = Date.now();
 });
-Client.getKeyBindFromKey(Keyboard.KEY_S).registerKeyPress(() => {
+Client.getKeyBindFromDescription("key.right").registerKeyPress(() => {
   lastInteraction = Date.now();
 });
-Client.getKeyBindFromKey(Keyboard.KEY_D).registerKeyPress(() => {
+Client.getKeyBindFromDescription("key.back").registerKeyPress(() => {
   lastInteraction = Date.now();
 });
-Client.getKeyBindFromKey(Keyboard.KEY_SPACE).registerKeyPress(() => {
+Client.getKeyBindFromDescription("key.jump").registerKeyPress(() => {
   lastInteraction = Date.now();
 });
 const isPlayerMoving = () => {
   const fiveMinutes = 1000 * 60 * 5;
   if (Date.now() - lastInteraction <= fiveMinutes) {
-    return "Moving";
+    return "Active";
   }
 };
 export { isPlayerMoving };
