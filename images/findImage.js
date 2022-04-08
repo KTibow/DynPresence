@@ -25,9 +25,9 @@ export const findImage = () => {
         fullyMatches = false;
       }
     }
-    /*if (image.scriptMatcher && !eval(image.scriptMatcher)) {
+    if (image.scriptMatcher && !eval(image.scriptMatcher)) {
       fullyMatches = false;
-    }*/
+    }
     if (fullyMatches) {
       if (!largeImage && image.largeImage) {
         largeImage = image.largeImage;

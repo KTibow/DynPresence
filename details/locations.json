@@ -536,8 +536,8 @@
   },
 
   {
-    "matcher": { "gametype": "PROTOTYPE", "mode": "INVADERS" },
-    "name": "Invaders"
+    "matcher": { "gametype": "PROTOTYPE", "mode": "WOOL_WARS" },
+    "name": "Wool Wars"
   },
   {
     "matcher": { "gametype": "PROTOTYPE", "mode": "PIXEL_PARTY" },
