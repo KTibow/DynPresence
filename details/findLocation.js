@@ -26,31 +26,25 @@ const findLocation = () => {
       return [location, locraw];
     }
   }
-  ChatLib.chat(`&eDynPresence couldn't find any matches for your location.&r`);
-  ChatLib.chat(`&ePlease let me know at &9KTibow#3960&e.&r`);
-  ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
+  ChatLib.chat(`&eDynPresence couldn't find any matches for your location.&r
+&ePlease let me know at &9KTibow#3960&e.&r
+&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
   return [null, locraw];
 };
 
-const findLocationName = () => {
+export const findLocationName = () => {
   const [location, locraw] = findLocation();
   if (location) {
     if (location.warn) {
-      ChatLib.chat(`&eDynPresence couldn't find an exact match for your location.&r`);
-      ChatLib.chat(
-        `&eFor now, it'll assume that it's the general game, or the experimental version of it.&r`
-      );
-      ChatLib.chat(
-        `&eIf you're in a different game, please let me know at &9KTibow#3960&e.&r`
-      );
-      ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
+      ChatLib.chat(`&eDynPresence couldn't find an exact match for your location.&r
+&eFor now, it'll assume that it's the general game, or the experimental version of it.&r
+&ePlease let me know about this at &9KTibow#3960&e.&r
+&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
     }
     if (location.customName) {
-      return eval(location.customName)(locraw);
+      return eval(location.customName);
     }
     return location.name;
   }
   return "Unknown";
 };
-
-export { findLocationName };

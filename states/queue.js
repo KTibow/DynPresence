@@ -3,7 +3,7 @@
 
 import { getLocraw, lastLocrawUpdate } from "../details/updateLocraw";
 
-const isPlayerInQueue = () => {
+export const isPlayerInQueue = () => {
   const location = getLocraw();
   if (location.server?.includes("lobby")) return false;
   const isPlayerQueuing = Scoreboard.getLines().some((line) => {
@@ -37,5 +37,3 @@ const isPlayerInQueue = () => {
     );
   }
 };
-
-export { isPlayerInQueue };

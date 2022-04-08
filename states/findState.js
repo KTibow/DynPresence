@@ -6,18 +6,9 @@ import { isPlayerMoving } from "./moving";
 import { isPlayerInQueue } from "./queue";
 import { findSkillGrinding } from "./skills";
 
-const priorities = [
-  findSkillGrinding,
-  isPlayerInQueue,
-  isPlayerMoving,
-  // TODO: Implement Mining
-  // TODO: Implement Fishing
-  // TODO: Implement Foraging
-  // (for skills, use the Hypixel API)
-  // TODO: Make it Skyblock only
-];
+const priorities = [findSkillGrinding, isPlayerInQueue, isPlayerMoving];
 
-const findState = () => {
+export const findState = () => {
   const chattingAddon = isPlayerChatting() ? " & Chatting" : "";
   for (activityTester of priorities) {
     // Is the player doing this?
@@ -28,5 +19,3 @@ const findState = () => {
   }
   return "AFK" + chattingAddon;
 };
-
-export { findState };

@@ -86,12 +86,12 @@
   },
   {
     "matcher": { "server": ".*lobby.*" },
-    "customName": "parseLobby"
+    "customName": "parseLobby(locraw)"
   },
 
   {
     "matcher": { "gametype": "SKYBLOCK" },
-    "customName": "parseSkyblock"
+    "customName": "parseSkyblock(locraw)"
   },
 
   {
@@ -219,7 +219,7 @@
     "matcher": {
       "gametype": "HOUSING"
     },
-    "customName": "parseHouse"
+    "customName": "parseHouse(locraw)"
   },
 
   {

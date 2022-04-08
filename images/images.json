@@ -1,5 +1,13 @@
 [
   {
+    "locMatcher": { "gametype": "BEDWARS" },
+    "largeImage": "bedwarsv2"
+  },
+  {
+    "locMatcher": { "gametype": "DUELS" },
+    "largeImage": "duels"
+  },
+  {
     "locMatcher": { "server": "limbo" },
     "largeImage": "limbov3"
   },
@@ -8,7 +16,32 @@
     "largeImage": "replay"
   },
   {
-    "locMatcher": { "gametype": "BEDWARS" },
-    "largeImage": "bedwarsv2"
+    "locMatcher": { "gametype": "SKYBLOCK" },
+    "scriptMatcher": "parseSkyblock(locraw)?.endsWith('Skyblock Hub')",
+    "largeImage": "sbhub"
+  },
+  {
+    "scriptMatcher": "findSkillGrinding() == 'Grinding Combat'",
+    "smallImage": "small-combat"
+  },
+  {
+    "scriptMatcher": "findSkillGrinding() == 'Grinding Fishing'",
+    "smallImage": "small-fishing"
+  },
+  {
+    "scriptMatcher": "findSkillGrinding() == 'Grinding Combat'",
+    "smallImage": "small-foraging"
+  },
+  {
+    "scriptMatcher": "findSkillGrinding() == 'Grinding Mining'",
+    "smallImage": "small-mining"
+  },
+  {
+    "scriptMatcher": "isPlayerInQueue()",
+    "smallImage": "small-waiting"
+  },
+  {
+    "scriptMatcher": "!isPlayerMoving()",
+    "smallImage": "small-afk"
   }
 ]

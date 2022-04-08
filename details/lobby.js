@@ -7,8 +7,6 @@ const toTitleCase = (str) => {
   });
 };
 
-const parseLobby = (locraw) => {
+export const parseLobby = (locraw) => {
   return toTitleCase(locraw.gametype.replace("_", " ")) + " Lobby";
 };
-
-export { parseLobby };

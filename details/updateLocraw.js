@@ -2,7 +2,7 @@
 /// <reference lib="es2015" />
 
 let lastLocraw = {};
-let lastLocrawUpdate = 0;
+export let lastLocrawUpdate = 0;
 
 register("chat", (event) => {
   try {
@@ -15,7 +15,7 @@ register("chat", (event) => {
   }
 }).setPriority(Priority.HIGH);
 
-const isOnHypixel = () => {
+export const isOnHypixel = () => {
   return Server.getIP()?.includes("hypixel");
 };
 
@@ -32,8 +32,6 @@ register("worldLoad", () => {
   // Wait 5 seconds before asking for the current location
 });
 
-const getLocraw = () => {
+export const getLocraw = () => {
   return lastLocraw;
 };
-
-export { getLocraw, isOnHypixel, lastLocrawUpdate };

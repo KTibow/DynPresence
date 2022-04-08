@@ -1,7 +1,8 @@
 /// <reference path="../../CTAutocomplete/index.d.ts" />
 /// <reference lib="es2015" />
 
-const parseSkyblock = (locraw) => {
+export const parseSkyblock = (locraw) => {
+  if (locraw.gametype != "SKYBLOCK") return;
   if (locraw.mode == "dynamic") {
     // Private island
     for (let text of TabList.getNames()) {
@@ -28,10 +29,8 @@ const parseSkyblock = (locraw) => {
       return `Skyblock ${locraw.map}`;
     }
   }
-  ChatLib.chat(`&eDynPresence couldn't find any Skyblock matches for your location.&r`);
-  ChatLib.chat(`&ePlease let me know at &9KTibow#3960&e.&r`);
-  ChatLib.chat(`&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
+  ChatLib.chat(`&eDynPresence couldn't find any Skyblock matches for your location.&r
+&ePlease let me know at &9KTibow#3960&e.&r
+&eDebug info to pass on:&r ${JSON.stringify(locraw)}`);
   return "Skyblock";
 };
-
-export { parseSkyblock };

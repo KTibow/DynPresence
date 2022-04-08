@@ -20,7 +20,7 @@ register("actionBar", (event) => {
   });
 });
 
-const findSkillGrinding = () => {
+export const findSkillGrinding = () => {
   // If the player is in Skyblock,
   // tally up the number of times the player gained XP,
   // and return the skill type with the highest amount.
@@ -37,5 +37,3 @@ const findSkillGrinding = () => {
   if (sortedSkills[0][1] < 20) return;
   return `Grinding ${sortedSkills[0][0]}`;
 };
-
-export { findSkillGrinding };

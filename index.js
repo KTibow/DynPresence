@@ -14,35 +14,38 @@ import { findState } from "./states/findState";
 
 let timeStarted = 0;
 let discordConnected = false;
-register("tick", () => {
+let lastFetch = {};
+register("step", () => {
   if (timeStarted === 0 && isOnHypixel()) {
     timeStarted = Date.now();
   } else if (timeStarted !== 0 && !isOnHypixel()) {
     timeStarted = 0;
   }
   if (isOnHypixel()) {
-    const state = findState();
-    const location = findLocationName();
-    const image = findImage();
+    let start = Date.now();
+    lastFetch.state = findState();
+    lastFetch.location = findLocationName();
+    lastFetch.image = findImage();
+    lastFetch.locraw = getLocraw();
     let presence = new DiscordRichPresence();
-    presence.state = state;
-    presence.details = location;
+    presence.state = lastFetch.state;
+    presence.details = lastFetch.location;
     presence.startTimestamp = timeStarted;
     if (image && image.largeImage) {
-      presence.largeImageKey = image.largeImage;
+      presence.largeImageKey = lastFetch.image.largeImage;
     }
     if (image && image.smallImage) {
-      presence.smallImageKey = image.smallImage;
+      presence.smallImageKey = lastFetch.image.smallImage;
     }
     setRichPresence(presence);
   }
-});
+}).setFps(2);
 
 register("renderOverlay", () => {
-  Renderer.drawString(findState(), 10, 10);
-  Renderer.drawString(findLocationName(), 10, 20);
-  Renderer.drawString(JSON.stringify(findImage()), 10, 30);
-  Renderer.drawString(JSON.stringify(getLocraw()), 10, 40);
+  Renderer.drawString(lastFetch.state, 10, 10);
+  Renderer.drawString(lastFetch.location, 10, 20);
+  Renderer.drawString(JSON.stringify(lastFetch.image), 10, 30);
+  Renderer.drawString(JSON.stringify(lastFetch.locraw), 10, 40);
 });
 
 register("worldLoad", () => {

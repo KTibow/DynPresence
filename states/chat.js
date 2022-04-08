@@ -24,7 +24,7 @@ register("messageSent", (message) => {
   });
 });
 let lastChats = [];
-const isPlayerChatting = () => {
+export const isPlayerChatting = () => {
   let recentChatCount = 0;
   for (chat of lastChats) {
     const isRecent = Date.now() - chat.timestamp < 1000 * 60;
@@ -34,4 +34,3 @@ const isPlayerChatting = () => {
   }
   return recentChatCount >= 5;
 };
-export { isPlayerChatting };

@@ -17,10 +17,9 @@ Client.getKeyBindFromDescription("key.back").registerKeyPress(() => {
 Client.getKeyBindFromDescription("key.jump").registerKeyPress(() => {
   lastInteraction = Date.now();
 });
-const isPlayerMoving = () => {
+export const isPlayerMoving = () => {
   const fiveMinutes = 1000 * 60 * 5;
   if (Date.now() - lastInteraction <= fiveMinutes) {
     return "Active";
   }
 };
-export { isPlayerMoving };
