@@ -31,11 +31,12 @@ register("step", () => {
     presence.state = lastFetch.state;
     presence.details = lastFetch.location;
     presence.startTimestamp = timeStarted;
-    if (image && image.largeImage) {
-      presence.largeImageKey = lastFetch.image.largeImage;
+    const images = lastFetch.image;
+    if (images && images.largeImage) {
+      presence.largeImageKey = images.largeImage;
     }
-    if (image && image.smallImage) {
-      presence.smallImageKey = lastFetch.image.smallImage;
+    if (images && images.smallImage) {
+      presence.smallImageKey = images.smallImage;
     }
     setRichPresence(presence);
   }
